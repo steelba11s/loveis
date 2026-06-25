@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Для Сони</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="screen screen-start is-active" id="startScreen">
+        <div class="floating-hearts" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="start-content">
+          <p class="eyebrow">маленький сайт-подарок</p>
+          <h1>Соня, пройдешь один очень важный тест?</h1>
+          <p class="lead">
+            Тут всего 10 вопросов, но от них зависит официальная статистика любви к Артуру.
+          </p>
+          <button class="primary-button" id="startButton" type="button">
+            Начать тест
+          </button>
+        </div>
+      </section>
+
+      <section class="screen screen-quiz" id="quizScreen" aria-live="polite">
+        <div class="quiz-shell">
+          <div class="quiz-top">
+            <span id="questionCounter">1 из 10</span>
+            <div class="progress" aria-hidden="true">
+              <span id="progressBar"></span>
+            </div>
+          </div>
+
+          <h2 id="questionText">Ты любишь Артура?</h2>
+          <p class="reaction" id="reactionText">Выбирай честно, но правильно.</p>
+          <div class="answers" id="answers"></div>
+        </div>
+      </section>
+
+      <section class="screen screen-result" id="resultScreen">
+        <div class="result-hero">
+          <p class="eyebrow">результат теста</p>
+          <h2>Соня официально очень сильно любит Артура</h2>
+          <p>
+            Тест пройден идеально. Артур тоже любит Соню очень-очень сильно.
+          </p>
+          <button class="primary-button" id="showGalleryButton" type="button">
+            Смотреть наши фото
+          </button>
+        </div>
+      </section>
+
+      <section class="gallery-section" id="gallerySection">
+        <div class="section-heading">
+          <p class="eyebrow">наши моменты</p>
+          <h2>Галерея с самыми милыми фото</h2>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </section>
+
+      <section class="compliments-section">
+        <div class="compliments-panel">
+          <p class="eyebrow">комплимент от Артура</p>
+          <h2 id="complimentText">Ты самая милая девочка на свете.</h2>
+          <button class="secondary-button" id="complimentButton" type="button">
+            Еще комплимент
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Закрыть">
+        x
+      </button>
+      <img id="lightboxImage" src="" alt="" />
+      <p id="lightboxCaption"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
